@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="DustShift: Last Liquidation"
+config/version="0.0.1"
+run/main_scene="res://main_menu.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://imgs/icon.png"
+
+[autoload]
+
+MusicController="*res://MusicController.tscn"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=700
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://imgs/mouse.png"
+
+[dotnet]
+
+project/assembly_name="DustShift_GOT"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
+[physics]
+
+2d/run_on_separate_thread=true
+
+[rendering]
+
+gl_compatibility/nvidia_disable_threaded_optimization=false
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

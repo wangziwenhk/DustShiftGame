@@ -1,0 +1,279 @@
+[gd_scene load_steps=25 format=3 uid="uid://dsm8vh1voxbab"]
+
+[ext_resource type="Texture2D" uid="uid://deosquxm22mes" path="res://imgs/title.png" id="1_j1a2t"]
+[ext_resource type="Script" path="res://scripts/main_menu_script.gd" id="1_ue4rj"]
+[ext_resource type="Texture2D" uid="uid://c38linsjysp6b" path="res://imgs/subtitle.png" id="2_tjbwh"]
+[ext_resource type="Texture2D" uid="uid://6noy5qbxi1pb" path="res://imgs/back_sky.png" id="3_6732m"]
+[ext_resource type="Texture2D" uid="uid://b2ctpcaws574x" path="res://imgs/back_sky_head.png" id="4_ueai4"]
+[ext_resource type="Texture2D" uid="uid://qrqxqmvomydx" path="res://imgs/back_sky_star.png" id="5_1iupb"]
+[ext_resource type="Texture2D" uid="uid://dfi8jtvoo6h13" path="res://imgs/back_sky_build.png" id="6_4vr27"]
+[ext_resource type="Texture2D" uid="uid://cxsrwlxk8c4h0" path="res://imgs/rain.png" id="6_nee7t"]
+[ext_resource type="Texture2D" uid="uid://bckn1vlndneos" path="res://imgs/back_base.png" id="7_0176t"]
+[ext_resource type="Texture2D" uid="uid://d1d11sia7ofc3" path="res://imgs/back_chara.png" id="8_4pbu4"]
+[ext_resource type="FontFile" uid="uid://qopw5xj8a2ah" path="res://DeterminationMonoWebRegular-Z5oq.ttf" id="8_d4uhl"]
+[ext_resource type="Texture2D" uid="uid://bkx5h5s8jmb7r" path="res://imgs/start_button_normal.png" id="8_xaqkk"]
+[ext_resource type="Texture2D" uid="uid://dxpai3re78n7c" path="res://imgs/button_push.png" id="9_bomcs"]
+[ext_resource type="Texture2D" uid="uid://bt3h1e4cusjvx" path="res://imgs/start_button_light.png" id="10_73h1g"]
+[ext_resource type="BitMap" uid="uid://1vtat8gtqo0i" path="res://imgs/button_normal_bitmap.png" id="11_3yp16"]
+[ext_resource type="Texture2D" uid="uid://coag0v8lyjj4" path="res://imgs/about_button_normal.png" id="12_2stav"]
+[ext_resource type="Texture2D" uid="uid://di4g8eq3tbcv3" path="res://imgs/about_button_light.png" id="13_tljh2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lbjpd"]
+font = ExtResource("8_d4uhl")
+font_size = 40
+shadow_color = Color(0.584314, 0.243137, 0.839216, 1)
+
+[sub_resource type="Animation" id="Animation_ygpib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(293, 103)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_m17tj"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.406126, 1),
+"update": 0,
+"values": [Vector2(293, 500), Vector2(293, 103)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxus4"]
+_data = {
+"RESET": SubResource("Animation_ygpib"),
+"start": SubResource("Animation_m17tj")
+}
+
+[sub_resource type="Animation" id="Animation_g64cx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3sk74"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.406126, 1),
+"update": 0,
+"values": [Vector2(300, 500), Vector2(300, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cnmwl"]
+_data = {
+"RESET": SubResource("Animation_g64cx"),
+"start": SubResource("Animation_3sk74")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ue4rj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1205.0
+offset_bottom = 707.0
+color = Color(0, 0, 0, 1)
+
+[node name="BackSky" type="Sprite2D" parent="."]
+position = Vector2(865, 403)
+scale = Vector2(0.186374, 0.187768)
+texture = ExtResource("3_6732m")
+
+[node name="BackSkyHead" type="Sprite2D" parent="."]
+position = Vector2(883, 536)
+scale = Vector2(0.293919, 0.328058)
+texture = ExtResource("4_ueai4")
+
+[node name="BackSkyBuild" type="Sprite2D" parent="."]
+position = Vector2(884, 469)
+scale = Vector2(0.436186, 0.485515)
+texture = ExtResource("6_4vr27")
+
+[node name="BackSkyStar" type="Sprite2D" parent="."]
+position = Vector2(882, 462)
+scale = Vector2(0.313814, 0.278702)
+texture = ExtResource("5_1iupb")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(746, 234)
+rotation = 0.785398
+scale = Vector2(0.199998, 0.32)
+skew = -1.26362
+lifetime = 0.5
+speed_scale = 1.55
+fixed_fps = 60
+local_coords = true
+texture = ExtResource("6_nee7t")
+emission_shape = 3
+emission_rect_extents = Vector2(700, 200)
+initial_velocity_min = 159.29
+initial_velocity_max = 630.66
+scale_amount_min = 0.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 506.0
+offset_top = 68.0
+offset_right = 872.0
+offset_bottom = 322.0
+rotation = -0.269006
+color = Color(0, 0, 0, 1)
+
+[node name="BackBase" type="Sprite2D" parent="."]
+position = Vector2(871, 427)
+scale = Vector2(0.244932, 0.208557)
+texture = ExtResource("7_0176t")
+
+[node name="BackChara" type="Sprite2D" parent="."]
+position = Vector2(862, 430)
+scale = Vector2(0.2096, 0.199906)
+texture = ExtResource("8_4pbu4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Title")
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 652.0
+offset_right = 1204.0
+offset_bottom = 709.0
+text = "Godot Edition: v0.0.1 Demo"
+label_settings = SubResource("LabelSettings_lbjpd")
+
+[node name="StartPane" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1204.0
+offset_bottom = 705.0
+color = Color(0, 0, 0, 1)
+
+[node name="StartButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 224.0
+offset_right = 4110.0
+offset_bottom = 4320.0
+scale = Vector2(0.137425, 0.105976)
+texture_normal = ExtResource("8_xaqkk")
+texture_pressed = ExtResource("9_bomcs")
+texture_hover = ExtResource("10_73h1g")
+texture_click_mask = ExtResource("11_3yp16")
+
+[node name="AboutButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 370.0
+offset_right = 4107.0
+offset_bottom = 4466.0
+scale = Vector2(0.139048, 0.108368)
+texture_normal = ExtResource("12_2stav")
+texture_pressed = ExtResource("9_bomcs")
+texture_hover = ExtResource("13_tljh2")
+texture_click_mask = ExtResource("11_3yp16")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(293, 103)
+scale = Vector2(0.75, 0.775591)
+texture = ExtResource("1_j1a2t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
+libraries = {
+"": SubResource("AnimationLibrary_pxus4")
+}
+autoplay = "start"
+
+[node name="Subtitle" type="Sprite2D" parent="."]
+position = Vector2(300, 191)
+scale = Vector2(0.648089, 0.562992)
+texture = ExtResource("2_tjbwh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Subtitle"]
+libraries = {
+"": SubResource("AnimationLibrary_cnmwl")
+}
+autoplay = "start"
