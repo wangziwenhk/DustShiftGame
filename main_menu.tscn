@@ -197,6 +197,7 @@ initial_velocity_max = 630.66
 scale_amount_min = 0.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 506.0
 offset_top = 68.0
 offset_right = 872.0

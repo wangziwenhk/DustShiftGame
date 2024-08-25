@@ -3,6 +3,7 @@ extends Node2D
 @onready var back = $Back
 @onready var sp1 = $SP1
 @onready var sp2 = $SP2
+@onready var sp3 = $SP3
 @onready var new_node = $StartPane
 
 var phease = 0
@@ -13,6 +14,7 @@ func _ready():
 	back.connect("pressed",_back)
 	sp1.connect("pressed",_sp1)
 	sp2.connect("pressed",_sp2)
+	sp3.connect("pressed",_sp3)
 	sp1.connect("hovered",_sp1_hover)
 	$P1S/P1SAnimation.connect("animation_finished",_animation_finished_sp1)
 	$P2S/P2SAnimation.connect("animation_finished",_animation_finished_sp2)
@@ -30,11 +32,14 @@ func _process(delta):
 		_sp1_hover()
 	elif get_node("SP2").is_hovered():
 		_sp2_hover()
+	elif get_node("SP3").is_hovered():
+		_sp3_hover()
 	pass
 	
 func _sp1_hover():
 	if phease == 1: return
 	phease = 1
+	$P3S/P3SAnimation.play("RESET")
 	$P2S/P2SAnimation.play("RESET")
 	$P1S/P1SAnimation.play("in_move")
 	
@@ -42,8 +47,16 @@ func _sp1_hover():
 func _sp2_hover():
 	if phease == 2: return
 	phease = 2
+	$P3S/P3SAnimation.play("RESET")
 	$P1S/P1SAnimation.play("RESET")
 	$P2S/P2SAnimation.play("in_move")
+
+func _sp3_hover():
+	if phease == 3: return
+	phease = 3
+	$P1S/P1SAnimation.play("RESET")
+	$P2S/P2SAnimation.play("RESET")
+	$P3S/P3SAnimation.play("in_move")
 	
 func _animation_finished_sp1(name):
 	if name == "in_move":
@@ -66,6 +79,10 @@ func _sp1():
 	pass
 	
 func _sp2():
+	MusicController.save()
+	pass
+	
+func _sp3():
 	MusicController.save()
 	pass
 

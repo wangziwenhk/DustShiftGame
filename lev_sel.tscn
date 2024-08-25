@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://j43i1uvn252i"]
+[gd_scene load_steps=27 format=3 uid="uid://j43i1uvn252i"]
 
 [ext_resource type="Script" path="res://scripts/lev_sel_script.gd" id="1_h7jdx"]
 [ext_resource type="Texture2D" uid="uid://dawclwhdhe38g" path="res://imgs/back.png" id="2_23cr5"]
@@ -10,7 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://bg5bmevwb6swm" path="res://imgs/sel_p2_normal.png" id="6_c6dt1"]
 [ext_resource type="Texture2D" uid="uid://brbc305sxglj7" path="res://imgs/sel_p1_light.png" id="7_nf7xk"]
 [ext_resource type="Texture2D" uid="uid://n0rgv6d7vvfb" path="res://imgs/sel_p2_push.png" id="9_8xsyr"]
+[ext_resource type="Texture2D" uid="uid://cjuj4dltnewk1" path="res://imgs/sel_p3_normal.png" id="10_der31"]
 [ext_resource type="Texture2D" uid="uid://bw8avghv4bajj" path="res://imgs/sel_p2_light.png" id="10_djq2l"]
+[ext_resource type="Texture2D" uid="uid://k27hkvwibru5" path="res://imgs/sel_p3_push.png" id="11_ifwkv"]
+[ext_resource type="Texture2D" uid="uid://c7j1e60jh7a0d" path="res://imgs/sel_p3_light.png" id="12_ipbke"]
+[ext_resource type="Texture2D" uid="uid://tnwgoh1an6ry" path="res://imgs/p3_s.png" id="15_s5qyl"]
 
 [sub_resource type="Animation" id="Animation_c7ah3"]
 length = 0.001
@@ -112,7 +116,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-166, 321)]
+"values": [Vector2(-400, 321)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -139,7 +143,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.392292, 0.965936),
 "update": 0,
-"values": [Vector2(-157, 321), Vector2(200, 321)]
+"values": [Vector2(-370, 321), Vector2(200, 321)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -188,6 +192,66 @@ _data = {
 "out_move": SubResource("Animation_46lwa")
 }
 
+[sub_resource type="Animation" id="Animation_5o0b7"]
+resource_name = "in_move"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.392, 1),
+"update": 0,
+"values": [Vector2(-385, 297), Vector2(14, 313)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6ntlq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-385, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qdmp"]
+_data = {
+"RESET": SubResource("Animation_6ntlq"),
+"in_move": SubResource("Animation_5o0b7")
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_h7jdx")
 
@@ -228,6 +292,15 @@ texture_normal = ExtResource("6_c6dt1")
 texture_pressed = ExtResource("9_8xsyr")
 texture_hover = ExtResource("10_djq2l")
 
+[node name="SP3" type="TextureButton" parent="."]
+offset_left = 602.0
+offset_top = 417.0
+offset_right = 973.0
+offset_bottom = 501.0
+texture_normal = ExtResource("10_der31")
+texture_pressed = ExtResource("11_ifwkv")
+texture_hover = ExtResource("12_ipbke")
+
 [node name="P2S" type="Sprite2D" parent="."]
 modulate = Color(0.32549, 0.32549, 0.32549, 1)
 position = Vector2(-328, 342)
@@ -240,10 +313,20 @@ libraries = {
 
 [node name="P1S" type="Sprite2D" parent="."]
 modulate = Color(0.313726, 0.313726, 0.313726, 1)
-position = Vector2(-166, 321)
+position = Vector2(-400, 321)
 texture = ExtResource("3_cyqre")
 
 [node name="P1SAnimation" type="AnimationPlayer" parent="P1S"]
 libraries = {
 "": SubResource("AnimationLibrary_3sbsv")
+}
+
+[node name="P3S" type="Sprite2D" parent="."]
+modulate = Color(0.313726, 0.313726, 0.313726, 1)
+position = Vector2(-385, 305)
+texture = ExtResource("15_s5qyl")
+
+[node name="P3SAnimation" type="AnimationPlayer" parent="P3S"]
+libraries = {
+"": SubResource("AnimationLibrary_3qdmp")
 }
