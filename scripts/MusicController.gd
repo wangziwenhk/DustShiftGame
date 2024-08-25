@@ -4,32 +4,8 @@ extends Control
 @onready var _button_p = $ButtonP
 @onready var _save = $Saved
 @onready var _ut_start = $UTStart
-@onready var _text = $Text
-@onready var _damage = $damage
-@onready var _spearappear = $spearappear
-@onready var _av_audio = $AVAudio
-@onready var _select = $Select
-@onready var _test = $Test
 
 var _menu_status = true
-
-func play_test():
-	_test.play()
-
-func play_select():
-	_select.play()
-
-func play_av():
-	_av_audio.play()
-	
-func stop_av():
-	_av_audio.stop()
-
-func play_damage():
-	_damage.play()
-	
-func play_spearappear():
-	_spearappear.play()
 
 func play_main_menu():
 	if(_menu_status):
@@ -48,6 +24,3 @@ func save():
 
 func ut_start():
 	_ut_start.play()
-
-func text_audio():
-	_text.play()
