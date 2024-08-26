@@ -4,6 +4,7 @@ extends Control
 @onready var _button_p = $ButtonP
 @onready var _save = $Saved
 @onready var _ut_start = $UTStart
+@onready var _text = $Text
 
 var _menu_status = true
 
@@ -24,3 +25,6 @@ func save():
 
 func ut_start():
 	_ut_start.play()
+
+func text_audio():
+	_text.play()
