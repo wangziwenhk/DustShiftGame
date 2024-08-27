@@ -44,7 +44,7 @@ func read_text():
 			
 		$RichTextLabel.visible_ratio = 0
 		tween.tween_callback(_frame_update.bind(text_array[text_index]))
-		tween.tween_property($RichTextLabel,"visible_ratio",1,3)
+		tween.tween_property($RichTextLabel,"visible_ratio",1,1)
 		tween.play()
 	else:
 		end_text()
