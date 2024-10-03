@@ -4,24 +4,11 @@ extends Node
 @onready var animation_subtitle = $Subtitle/AnimationPlayer
 @onready var animation_warn_info = $WarnInfo/AnimationPlayer
 @onready var ok_z  = $Label/AnimationPlayer
-var menu = null
-
-var config = ConfigFile.new()
+@onready var menu = load("res://main_menu.tscn")
 
 var status = true
 
 func _ready():
-	var err = config.load("user://player_data.cfg")
-	if err != OK:
-		menu = load("res://story.tscn")
-		config.set_value("","story","true")
-		config.save("user://player_data.cfg")
-	else:
-		var a = config.get_value("","story","false")
-		if(a == "true"):
-			menu = load("res://main_menu.tscn")
-		else:
-			menu = load("res://story.tscn")
 	animation.connect("animation_finished",_show_subtitle)
 	animation_warn_info.connect("animation_finished",_show_warn)
 	animation_subtitle.connect("animation_finished",_subtitle_done)

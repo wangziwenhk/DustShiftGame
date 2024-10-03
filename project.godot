@@ -12,7 +12,7 @@ config_version=5
 
 config/name="DustShift: Last Liquidation"
 config/version="0.0.1"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://start.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
@@ -38,12 +38,27 @@ project/assembly_name="DustShift_GOT"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[input]
+
+ui_true={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"echo":false,"script":null)
+]
+}
+food_eat={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
+]
+}
+
 [physics]
 
 2d/run_on_separate_thread=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 gl_compatibility/nvidia_disable_threaded_optimization=false
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+viewport/hdr_2d=true

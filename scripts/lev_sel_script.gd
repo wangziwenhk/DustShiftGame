@@ -27,6 +27,7 @@ func _process(delta):
 	
 	if start == 2:
 		get_tree().change_scene_to_file("res://story.tscn")
+		return
 	
 	if get_node("SP1").is_hovered():
 		_sp1_hover()
@@ -80,6 +81,8 @@ func _sp1():
 	
 func _sp2():
 	MusicController.save()
+	MusicController.stop_main_menu()
+	get_tree().change_scene_to_file("res://phease_2.tscn")
 	pass
 	
 func _sp3():
