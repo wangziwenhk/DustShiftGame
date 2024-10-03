@@ -5,8 +5,16 @@ extends Control
 @onready var _save = $Saved
 @onready var _ut_start = $UTStart
 @onready var _text = $Text
+@onready var _damage = $damage
+@onready var _spearappear = $spearappear
 
 var _menu_status = true
+
+func play_damage():
+	_damage.play()
+	
+func play_spearappear():
+	_spearappear.play()
 
 func play_main_menu():
 	if(_menu_status):

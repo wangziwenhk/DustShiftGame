@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd2ehbf7w7cyv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jh2h1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1208.0
+offset_bottom = 712.0
+color = Color(0, 0, 0, 1)
+
+[node name="BlasterNormal" type="AnimatedSprite2D" parent="."]
+position = Vector2(1324, 273)
+sprite_frames = SubResource("SpriteFrames_jh2h1")

@@ -1,7 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://16ig2635ob8j"]
+[gd_scene load_steps=7 format=3 uid="uid://16ig2635ob8j"]
 
 [ext_resource type="FontFile" uid="uid://qopw5xj8a2ah" path="res://DeterminationMonoWebRegular-Z5oq.ttf" id="2_miwcx"]
+[ext_resource type="Shader" path="res://shader/light_text.gdshader" id="2_mvsl5"]
 [ext_resource type="Script" path="res://scripts/story_script.gd" id="3_4q3lo"]
+
+[sub_resource type="Environment" id="Environment_ek3wa"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.82
+glow_strength = 0.35
+glow_bloom = 0.2
+glow_hdr_threshold = 0.39
+glow_hdr_scale = 1.37
+glow_hdr_luminance_cap = 20.11
+adjustment_enabled = true
+adjustment_brightness = 0.94
+adjustment_contrast = 1.07
+adjustment_saturation = 0.72
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_em0uf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tav7i"]
+shader = ExtResource("2_mvsl5")
+shader_parameter/outline_width = 1.456
+shader_parameter/outline_color = Color(0.117647, 0.0901961, 0.0588235, 0.427451)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,22 +34,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_4q3lo")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ek3wa")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1210.0
 offset_bottom = 731.0
 color = Color(0, 0, 0, 1)
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = SubResource("CanvasTexture_em0uf")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+material = SubResource("ShaderMaterial_tav7i")
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -285.0
-offset_top = -154.0
-offset_right = 300.0
+offset_left = -413.0
+offset_top = -155.0
+offset_right = 398.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("2_miwcx")

@@ -4,9 +4,9 @@ extends Control
 var thread: Thread
 
 var text_array = [
-	"DEBUG TEXT",
-	"DEBUG TEXT",
-	"DEBUG TEXT"
+	"Today is a beautiful day outside.",
+	"Bird is singing, Flower is smiling.",
+	"One day of the kid like you."
 ]
 
 var text_index = 0
@@ -30,7 +30,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept") and text_start and (!text_status):
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_true")) and text_start and (!text_status):
 		read_text()
 
 func read_text():
@@ -44,7 +44,7 @@ func read_text():
 			
 		$RichTextLabel.visible_ratio = 0
 		tween.tween_callback(_frame_update.bind(text_array[text_index]))
-		tween.tween_property($RichTextLabel,"visible_ratio",1,1)
+		tween.tween_property($RichTextLabel,"visible_ratio",1,2)
 		tween.play()
 	else:
 		end_text()
@@ -58,5 +58,5 @@ func _frame_update(msg):
 func _thread_function(msg):
 	for i in msg:
 		MusicController.text_audio()
-		OS.delay_msec(95)
+		OS.delay_msec(60)
 	text_status = false
