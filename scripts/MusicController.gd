@@ -7,8 +7,12 @@ extends Control
 @onready var _text = $Text
 @onready var _damage = $damage
 @onready var _spearappear = $spearappear
+@onready var _av_audio = $AVAudio
 
 var _menu_status = true
+
+func play_av():
+	_av_audio.play()
 
 func play_damage():
 	_damage.play()
