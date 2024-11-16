@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk2gr0jt55ubf"]
+[gd_scene load_steps=10 format=3 uid="uid://bk2gr0jt55ubf"]
 
 [ext_resource type="Script" path="res://scripts/MusicController.gd" id="1_d1skh"]
 [ext_resource type="AudioStream" uid="uid://cnmbb7eofr32h" path="res://audio/dustshift_menu.mp3" id="2_pmy0h"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://d15lso0lgykkq" path="res://audio/SND_TXT2.wav" id="6_f2np5"]
 [ext_resource type="AudioStream" uid="uid://w8y6e15phqal" path="res://audio/snd_heavydamage.ogg" id="7_jdako"]
 [ext_resource type="AudioStream" uid="uid://ck2w3dgjdjm64" path="res://audio/snd_spearappear.wav" id="8_ks7cu"]
+[ext_resource type="AudioStream" uid="uid://de16l1bc3r512" path="res://audio/av_audio.mp3" id="9_rqp7u"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,3 +39,6 @@ stream = ExtResource("7_jdako")
 
 [node name="spearappear" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_ks7cu")
+
+[node name="AVAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rqp7u")
