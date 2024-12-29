@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyasa7ii5p75i"]
+
+[ext_resource type="Script" path="res://text/text.gd" id="1_o32jw"]
+[ext_resource type="Texture2D" uid="uid://pqsoqloxsbv8" path="res://imgs/wars/rightwide.png" id="2_2vusp"]
+
+[node name="Text" type="Node2D"]
+script = ExtResource("1_o32jw")
+
+[node name="bubble" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(80, 40)
+texture = ExtResource("2_2vusp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+custom_minimum_size = Vector2(200, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bk2gr0jt55ubf"]
 
 [ext_resource type="Script" path="res://scripts/MusicController.gd" id="1_d1skh"]
-[ext_resource type="AudioStream" uid="uid://cnmbb7eofr32h" path="res://audio/dustshift_menu.mp3" id="2_pmy0h"]
+[ext_resource type="AudioStream" uid="uid://bc3wjb1sbfyd" path="res://audio/menuX.mp3" id="2_t5ca2"]
 [ext_resource type="AudioStream" uid="uid://dp8v8lcgi8a45" path="res://audio/snd_select.wav" id="3_lksys"]
 [ext_resource type="AudioStream" uid="uid://bbasm0vqm85jo" path="res://audio/snd_save.wav" id="4_wkk3p"]
 [ext_resource type="AudioStream" uid="uid://5yhs2sc63otf" path="res://audio/undertale_start.mp3" id="5_vi3f2"]
@@ -20,7 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_d1skh")
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_pmy0h")
+stream = ExtResource("2_t5ca2")
 
 [node name="ButtonP" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lksys")
@@ -42,3 +42,6 @@ stream = ExtResource("8_ks7cu")
 
 [node name="AVAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_rqp7u")
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lksys")

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://deosquxm22mes" path="res://imgs/title.png" id="1_eamtm"]
 [ext_resource type="Texture2D" uid="uid://c38linsjysp6b" path="res://imgs/subtitle.png" id="2_m782f"]
 [ext_resource type="Texture2D" uid="uid://b0dqkgctmap1t" path="res://imgs/warn_info.png" id="4_j6c1a"]
-[ext_resource type="FontFile" uid="uid://qopw5xj8a2ah" path="res://DeterminationMonoWebRegular-Z5oq.ttf" id="5_qgmt3"]
+[ext_resource type="FontFile" uid="uid://qopw5xj8a2ah" path="res://fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="5_qgmt3"]
 
 [sub_resource type="Animation" id="Animation_msu8n"]
 length = 0.001

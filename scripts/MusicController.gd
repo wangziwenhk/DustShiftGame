@@ -8,11 +8,18 @@ extends Control
 @onready var _damage = $damage
 @onready var _spearappear = $spearappear
 @onready var _av_audio = $AVAudio
+@onready var _select = $Select
 
 var _menu_status = true
 
+func play_select():
+	_select.play()
+
 func play_av():
 	_av_audio.play()
+	
+func stop_av():
+	_av_audio.stop()
 
 func play_damage():
 	_damage.play()
