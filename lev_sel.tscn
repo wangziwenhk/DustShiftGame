@@ -1,9 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://j43i1uvn252i"]
+[gd_scene load_steps=35 format=3 uid="uid://j43i1uvn252i"]
 
 [ext_resource type="Script" path="res://scripts/lev_sel_script.gd" id="1_h7jdx"]
 [ext_resource type="Texture2D" uid="uid://dawclwhdhe38g" path="res://imgs/back.png" id="2_23cr5"]
+[ext_resource type="Texture2D" uid="uid://df4m81wjctdna" path="res://imgs/psel_left.png" id="2_hy6ft"]
 [ext_resource type="Texture2D" uid="uid://1v371u4s03r4" path="res://imgs/back_light.png" id="3_27js0"]
 [ext_resource type="Texture2D" uid="uid://d17ytq0roa42" path="res://imgs/p1_s.png" id="3_cyqre"]
+[ext_resource type="Texture2D" uid="uid://c27d13ssikisu" path="res://imgs/psel_right.png" id="3_y4s8i"]
 [ext_resource type="Texture2D" uid="uid://bo3l24nyoei00" path="res://imgs/p2_s.png" id="4_h8ei0"]
 [ext_resource type="Texture2D" uid="uid://bomtkwua10km5" path="res://imgs/sel_p1_normal.png" id="5_lnbc4"]
 [ext_resource type="Texture2D" uid="uid://ctwocj6r1typ7" path="res://imgs/sel_p1_push.png" id="6_3efd7"]
@@ -55,7 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.392292, 1),
 "update": 0,
-"values": [Vector2(-336, 329), Vector2(50, 329)]
+"values": [Vector2(-336, 329), Vector2(620, 329)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -143,7 +145,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.392292, 0.965936),
 "update": 0,
-"values": [Vector2(-370, 321), Vector2(200, 321)]
+"values": [Vector2(-370, 321), Vector2(800, 321)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -204,7 +206,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.392, 1),
 "update": 0,
-"values": [Vector2(-385, 297), Vector2(14, 313)]
+"values": [Vector2(-385, 297), Vector2(620, 313)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -252,6 +254,78 @@ _data = {
 "in_move": SubResource("Animation_5o0b7")
 }
 
+[sub_resource type="Animation" id="Animation_k3c83"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40.9999, 352)]
+}
+
+[sub_resource type="Animation" id="Animation_b4vdp"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.406126, 1),
+"update": 0,
+"values": [Vector2(-40.9999, 352), Vector2(600, 352)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0l88x"]
+_data = {
+"RESET": SubResource("Animation_k3c83"),
+"start": SubResource("Animation_b4vdp")
+}
+
+[sub_resource type="Animation" id="Animation_ymvq4"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(794, 354)]
+}
+
+[sub_resource type="Animation" id="Animation_d3xx4"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.353553, 1),
+"update": 0,
+"values": [Vector2(795, 354), Vector2(600, 354)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_40phi"]
+_data = {
+"RESET": SubResource("Animation_ymvq4"),
+"start": SubResource("Animation_d3xx4")
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_h7jdx")
 
@@ -259,47 +333,6 @@ script = ExtResource("1_h7jdx")
 offset_right = 1216.0
 offset_bottom = 717.0
 color = Color(0, 0, 0, 1)
-
-[node name="StartPane" type="ColorRect" parent="."]
-offset_right = 1216.0
-offset_bottom = 717.0
-color = Color(0, 0, 0, 1)
-
-[node name="Back" type="TextureButton" parent="."]
-offset_left = 23.0
-offset_top = 643.0
-offset_right = 337.0
-offset_bottom = 723.0
-scale = Vector2(0.528387, 0.48988)
-texture_normal = ExtResource("2_23cr5")
-texture_pressed = ExtResource("3_27js0")
-
-[node name="SP1" type="TextureButton" parent="."]
-offset_left = 493.0
-offset_top = 181.0
-offset_right = 851.0
-offset_bottom = 265.0
-texture_normal = ExtResource("5_lnbc4")
-texture_pressed = ExtResource("6_3efd7")
-texture_hover = ExtResource("7_nf7xk")
-
-[node name="SP2" type="TextureButton" parent="."]
-offset_left = 549.0
-offset_top = 295.0
-offset_right = 907.0
-offset_bottom = 379.0
-texture_normal = ExtResource("6_c6dt1")
-texture_pressed = ExtResource("9_8xsyr")
-texture_hover = ExtResource("10_djq2l")
-
-[node name="SP3" type="TextureButton" parent="."]
-offset_left = 602.0
-offset_top = 417.0
-offset_right = 973.0
-offset_bottom = 501.0
-texture_normal = ExtResource("10_der31")
-texture_pressed = ExtResource("11_ifwkv")
-texture_hover = ExtResource("12_ipbke")
 
 [node name="P2S" type="Sprite2D" parent="."]
 modulate = Color(0.32549, 0.32549, 0.32549, 1)
@@ -330,3 +363,65 @@ texture = ExtResource("15_s5qyl")
 libraries = {
 "": SubResource("AnimationLibrary_3qdmp")
 }
+
+[node name="PselLeft" type="Sprite2D" parent="."]
+position = Vector2(-40.9999, 352)
+scale = Vector2(0.510833, 0.507042)
+texture = ExtResource("2_hy6ft")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PselLeft"]
+libraries = {
+"": SubResource("AnimationLibrary_0l88x")
+}
+
+[node name="PselRight" type="Sprite2D" parent="."]
+position = Vector2(794, 354)
+scale = Vector2(0.507083, 0.497183)
+texture = ExtResource("3_y4s8i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PselRight"]
+libraries = {
+"": SubResource("AnimationLibrary_40phi")
+}
+
+[node name="Back" type="TextureButton" parent="."]
+offset_left = 1024.0
+offset_top = 648.0
+offset_right = 1338.0
+offset_bottom = 728.0
+scale = Vector2(0.528387, 0.48988)
+texture_normal = ExtResource("2_23cr5")
+texture_pressed = ExtResource("3_27js0")
+
+[node name="SP1" type="TextureButton" parent="."]
+offset_left = 148.0
+offset_top = 167.0
+offset_right = 506.0
+offset_bottom = 251.0
+texture_normal = ExtResource("5_lnbc4")
+texture_pressed = ExtResource("6_3efd7")
+texture_hover = ExtResource("7_nf7xk")
+
+[node name="SP2" type="TextureButton" parent="."]
+offset_left = 102.0
+offset_top = 292.0
+offset_right = 460.0
+offset_bottom = 376.0
+texture_normal = ExtResource("6_c6dt1")
+texture_pressed = ExtResource("9_8xsyr")
+texture_hover = ExtResource("10_djq2l")
+
+[node name="SP3" type="TextureButton" parent="."]
+offset_left = 55.0
+offset_top = 426.0
+offset_right = 426.0
+offset_bottom = 510.0
+texture_normal = ExtResource("10_der31")
+texture_pressed = ExtResource("11_ifwkv")
+texture_hover = ExtResource("12_ipbke")
+
+[node name="StartPane" type="ColorRect" parent="."]
+visible = false
+offset_right = 1216.0
+offset_bottom = 717.0
+color = Color(0, 0, 0, 1)

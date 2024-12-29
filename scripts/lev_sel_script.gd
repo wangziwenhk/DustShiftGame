@@ -6,6 +6,9 @@ extends Node2D
 @onready var sp3 = $SP3
 @onready var new_node = $StartPane
 
+@onready var psel_left_anim = $PselLeft/AnimationPlayer
+@onready var psel_right_anim = $PselRight/AnimationPlayer
+
 var phease = 0
 var start = 0
 var thread = Thread.new()
@@ -18,7 +21,8 @@ func _ready():
 	sp1.connect("hovered",_sp1_hover)
 	$P1S/P1SAnimation.connect("animation_finished",_animation_finished_sp1)
 	$P2S/P2SAnimation.connect("animation_finished",_animation_finished_sp2)
-	pass # Replace with function body.
+	psel_left_anim.play("start")
+	psel_right_anim.play("start")
 
 func _process(delta):
 	if start == 1 && new_node.color.a < 1:
@@ -26,7 +30,7 @@ func _process(delta):
 		return
 	
 	if start == 2:
-		get_tree().change_scene_to_file("res://story.tscn")
+		get_tree().change_scene_to_file("res://phease_1.tscn")
 		return
 	
 	if get_node("SP1").is_hovered():

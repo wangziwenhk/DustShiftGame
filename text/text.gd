@@ -57,6 +57,7 @@ var English = [
 
 
 func _ready():
+	#z_index = Index.dialog
 	$RichTextLabel.visible_characters = 0
 	_text = text
 	if bubbles :
