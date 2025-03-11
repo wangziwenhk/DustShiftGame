@@ -96,6 +96,7 @@ sprite_frames = SubResource("SpriteFrames_n3hbh")
 animation = &"new_animation"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1210.0
 offset_bottom = 731.0
 color = Color(0, 0, 0, 0)

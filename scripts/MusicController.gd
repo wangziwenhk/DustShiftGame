@@ -9,8 +9,12 @@ extends Control
 @onready var _spearappear = $spearappear
 @onready var _av_audio = $AVAudio
 @onready var _select = $Select
+@onready var _test = $Test
 
 var _menu_status = true
+
+func play_test():
+	_test.play()
 
 func play_select():
 	_select.play()

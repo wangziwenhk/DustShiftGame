@@ -728,16 +728,16 @@ texture = ExtResource("8_jpxx7")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 259.0
-offset_top = 331.0
+offset_top = 30.0
 offset_right = 357.0
-offset_bottom = 435.0
+offset_bottom = 134.0
 text = "DEBUG"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 829.0
-offset_top = 353.0
-offset_right = 1002.0
-offset_bottom = 420.0
+offset_left = 839.0
+offset_top = 152.0
+offset_right = 1012.0
+offset_bottom = 219.0
 text = "CLOSE"
 
 [node name="Text" type="Node2D" parent="."]
@@ -781,7 +781,7 @@ offset_left = 96.0
 offset_top = 547.0
 offset_right = 465.0
 offset_bottom = 594.0
-text = "Player    LV19    HP"
+text = "Player     LV1     HP"
 label_settings = SubResource("LabelSettings_yppvp")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
