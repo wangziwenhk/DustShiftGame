@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://b52yju8vxmop"]
 
-[ext_resource type="Script" path="res://scripts/start.gd" id="1_be1hj"]
+[ext_resource type="Script" uid="uid://crcpy06a3du01" path="res://scripts/start.gd" id="1_be1hj"]
 [ext_resource type="Texture2D" uid="uid://deosquxm22mes" path="res://imgs/title.png" id="1_eamtm"]
 [ext_resource type="Texture2D" uid="uid://c38linsjysp6b" path="res://imgs/subtitle.png" id="2_m782f"]
 [ext_resource type="Texture2D" uid="uid://b0dqkgctmap1t" path="res://imgs/warn_info.png" id="4_j6c1a"]
@@ -90,9 +90,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_splfq"]
 _data = {
-"RESET": SubResource("Animation_msu8n"),
-"fadeOn": SubResource("Animation_jmbsm"),
-"start": SubResource("Animation_svvh0")
+&"RESET": SubResource("Animation_msu8n"),
+&"fadeOn": SubResource("Animation_jmbsm"),
+&"start": SubResource("Animation_svvh0")
 }
 
 [sub_resource type="Animation" id="Animation_6wnpv"]
@@ -190,9 +190,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gf312"]
 _data = {
-"RESET": SubResource("Animation_6wnpv"),
-"fadeIn": SubResource("Animation_4plio"),
-"fadeOn": SubResource("Animation_e3xm4")
+&"RESET": SubResource("Animation_6wnpv"),
+&"fadeIn": SubResource("Animation_4plio"),
+&"fadeOn": SubResource("Animation_e3xm4")
 }
 
 [sub_resource type="Animation" id="Animation_5piye"]
@@ -258,10 +258,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8y0la"]
 _data = {
-"RESET": SubResource("Animation_5piye"),
-"fadeIn": SubResource("Animation_264oy"),
-"fadeOn": SubResource("Animation_fn8bq"),
-"wait": SubResource("Animation_tfe1n")
+&"RESET": SubResource("Animation_5piye"),
+&"fadeIn": SubResource("Animation_264oy"),
+&"fadeOn": SubResource("Animation_fn8bq"),
+&"wait": SubResource("Animation_tfe1n")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_o2hgg"]
@@ -303,8 +303,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_noia5"]
 _data = {
-"RESET": SubResource("Animation_o6vy1"),
-"loop": SubResource("Animation_6cwae")
+&"RESET": SubResource("Animation_o6vy1"),
+&"loop": SubResource("Animation_6cwae")
 }
 
 [node name="Control" type="Control"]

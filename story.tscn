@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://16ig2635ob8j"]
 
 [ext_resource type="Texture2D" uid="uid://df5kpyngk8s37" path="res://imgs/ps1.png" id="2_d8two"]
-[ext_resource type="Script" path="res://scripts/story_script.gd" id="3_4q3lo"]
+[ext_resource type="Script" uid="uid://c0v75oocavdu1" path="res://scripts/story_script.gd" id="3_4q3lo"]
 
 [sub_resource type="Environment" id="Environment_ek3wa"]
 background_mode = 3
@@ -67,8 +67,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v4yr1"]
 _data = {
-"RESET": SubResource("Animation_5fln4"),
-"fadeOut": SubResource("Animation_5oh7c")
+&"RESET": SubResource("Animation_5fln4"),
+&"fadeOut": SubResource("Animation_5oh7c")
 }
 
 [node name="Control" type="Control"]

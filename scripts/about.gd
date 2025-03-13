@@ -1,8 +1,8 @@
 extends Control
 
-@onready var back = $Back
-@onready var vsl = $VScrollBar
-@onready var info = $AboutInfo
+@onready var back: TextureButton = $Back
+@onready var vsl: VScrollBar = $VScrollBar
+@onready var info: Sprite2D = $AboutInfo
 
 func _ready():
 	back.connect("pressed",_back)

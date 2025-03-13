@@ -1,11 +1,11 @@
 extends Node
 
-@onready var start = $StartButton
-@onready var about = $AboutButton
+@onready var start: TextureButton = $StartButton
+@onready var about: TextureButton = $AboutButton
 
-@onready var start_pane = $StartPane
-@onready var title = $Title
-@onready var subtitle = $Subtitle
+@onready var start_pane: ColorRect = $StartPane
+@onready var title: Sprite2D = $Title
+@onready var subtitle: Sprite2D = $Subtitle
 
 func _ready():
 	start.connect("pressed",on_start_button)
@@ -17,7 +17,7 @@ func _ready():
 	start_pane.modulate.a = 1
 	MusicController.play_main_menu()
 
-func _process(delta):
+func _process(_delta):
 	if(title.modulate.a < 1):
 		title.modulate.a += 0.01
 		subtitle.modulate.a += 0.01

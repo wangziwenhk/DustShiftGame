@@ -1,6 +1,6 @@
 [gd_scene load_steps=52 format=3 uid="uid://cr078078byr2o"]
 
-[ext_resource type="Script" path="res://scripts/p1/phease_1.gd" id="1_72hmh"]
+[ext_resource type="Script" uid="uid://d0u0sxamyvnww" path="res://scripts/p1/phease_1.gd" id="1_72hmh"]
 [ext_resource type="Texture2D" uid="uid://dkympnsaf4wu2" path="res://imgs/p1chara/footer.png" id="1_sa7t2"]
 [ext_resource type="Texture2D" uid="uid://bmbx4dccuk8al" path="res://imgs/p1chara/body.png" id="2_sw3ak"]
 [ext_resource type="Texture2D" uid="uid://crkloudcvcbwg" path="res://imgs/p1chara/f1.png" id="3_r4y1f"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://jptn1b7t7q5b" path="res://imgs/p1chara/f2.png" id="5_g3akm"]
 [ext_resource type="Texture2D" uid="uid://8ah23xydxcrs" path="res://imgs/p1chara/head.png" id="6_wd27g"]
 [ext_resource type="Texture2D" uid="uid://btgr0if05nlcv" path="res://imgs/wars/border.png" id="7_wwhx6"]
-[ext_resource type="Script" path="res://scripts/p1/PlayerNode.gd" id="8_73n52"]
+[ext_resource type="Script" uid="uid://b1sq4lde5272b" path="res://scripts/p1/PlayerNode.gd" id="8_73n52"]
 [ext_resource type="Texture2D" uid="uid://bbv7ex4pxkc8u" path="res://imgs/wars/player.png" id="8_jpxx7"]
 [ext_resource type="Texture2D" uid="uid://csjct8yejt87p" path="res://imgs/wars/ui_p1_fight_normal.png" id="9_1fo76"]
 [ext_resource type="Texture2D" uid="uid://ck1pjcvv35fdb" path="res://imgs/wars/ui_p1_act_normal.png" id="10_llhms"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bkjwhewwb12vq" path="res://imgs/wars/ui_p1_item_light.png" id="14_rev34"]
 [ext_resource type="Texture2D" uid="uid://ccoifk5oqcsog" path="res://imgs/wars/ui_p1_act_light.png" id="16_khp2d"]
 [ext_resource type="Texture2D" uid="uid://dofv75trcdg50" path="res://imgs/wars/ui_p1_fight_light.png" id="18_h00qw"]
-[ext_resource type="Script" path="res://scripts/Text.gd" id="19_6w6yt"]
+[ext_resource type="Script" uid="uid://b0im5nste1jji" path="res://scripts/Text.gd" id="19_6w6yt"]
 [ext_resource type="Texture2D" uid="uid://pqsoqloxsbv8" path="res://imgs/wars/rightwide.png" id="20_4mqni"]
 [ext_resource type="FontFile" uid="uid://bo7jctwbec6gn" path="res://fonts/font_text.ttf" id="21_trxyp"]
 
@@ -89,7 +89,7 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uog65"]
 _data = {
-"normal": SubResource("Animation_d8fgq")
+&"normal": SubResource("Animation_d8fgq")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bags0"]
@@ -180,9 +180,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1i15l"]
 _data = {
-"RESET": SubResource("Animation_yvf8k"),
-"attick": SubResource("Animation_vm4j5"),
-"menu": SubResource("Animation_7dlyo")
+&"RESET": SubResource("Animation_yvf8k"),
+&"attick": SubResource("Animation_vm4j5"),
+&"menu": SubResource("Animation_7dlyo")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqead"]
@@ -273,9 +273,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v1or6"]
 _data = {
-"RESET": SubResource("Animation_vajgh"),
-"attick": SubResource("Animation_wj0kj"),
-"menu": SubResource("Animation_5p40i")
+&"RESET": SubResource("Animation_vajgh"),
+&"attick": SubResource("Animation_wj0kj"),
+&"menu": SubResource("Animation_5p40i")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eadpk"]
@@ -367,9 +367,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g2jwl"]
 _data = {
-"RESET": SubResource("Animation_rgl3a"),
-"attick": SubResource("Animation_kst7j"),
-"menu": SubResource("Animation_qk7mn")
+&"RESET": SubResource("Animation_rgl3a"),
+&"attick": SubResource("Animation_kst7j"),
+&"menu": SubResource("Animation_qk7mn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymhh6"]
@@ -461,9 +461,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n5cqq"]
 _data = {
-"RESET": SubResource("Animation_l5oq8"),
-"attick": SubResource("Animation_5b1ke"),
-"menu": SubResource("Animation_77wch")
+&"RESET": SubResource("Animation_l5oq8"),
+&"attick": SubResource("Animation_5b1ke"),
+&"menu": SubResource("Animation_77wch")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4p54t"]
@@ -556,7 +556,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ibbse"]
 _data = {
-"RESET": SubResource("Animation_wkyij")
+&"RESET": SubResource("Animation_wkyij")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_yppvp"]

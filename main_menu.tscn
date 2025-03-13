@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://dsm8vh1voxbab"]
 
 [ext_resource type="Texture2D" uid="uid://deosquxm22mes" path="res://imgs/title.png" id="1_j1a2t"]
-[ext_resource type="Script" path="res://scripts/main_menu_script.gd" id="1_ue4rj"]
+[ext_resource type="Script" uid="uid://bwnvo077fwohq" path="res://scripts/main_menu_script.gd" id="1_ue4rj"]
 [ext_resource type="Texture2D" uid="uid://c38linsjysp6b" path="res://imgs/subtitle.png" id="2_tjbwh"]
 [ext_resource type="Texture2D" uid="uid://6noy5qbxi1pb" path="res://imgs/back_sky.png" id="3_6732m"]
 [ext_resource type="Texture2D" uid="uid://b2ctpcaws574x" path="res://imgs/back_sky_head.png" id="4_ueai4"]
@@ -79,8 +79,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pxus4"]
 _data = {
-"RESET": SubResource("Animation_ygpib"),
-"start": SubResource("Animation_m17tj")
+&"RESET": SubResource("Animation_ygpib"),
+&"start": SubResource("Animation_m17tj")
 }
 
 [sub_resource type="Animation" id="Animation_g64cx"]
@@ -139,8 +139,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cnmwl"]
 _data = {
-"RESET": SubResource("Animation_g64cx"),
-"start": SubResource("Animation_3sk74")
+&"RESET": SubResource("Animation_g64cx"),
+&"start": SubResource("Animation_3sk74")
 }
 
 [node name="Control" type="Control"]

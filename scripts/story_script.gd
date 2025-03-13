@@ -1,6 +1,6 @@
 extends Control
 
-@onready var rect = $ColorRect2/AnimationPlayer
+@onready var rect: AnimationPlayer = $ColorRect2/AnimationPlayer
 var thread: Thread
 
 @export var EncounterText : Array = ["* This is a Undertale template."]
@@ -28,12 +28,12 @@ var _EncounterText = null
 	"Chara would make sure this is the last liquidation."
 ]
 
-var text_index = 0
-var text_start = false
-var text_status = false
+var text_index: int   = 0
+var text_start: bool  = false
+var text_status: bool = false
 
-var config = ConfigFile.new()
-var text_length = 0
+var config           = ConfigFile.new()
+var text_length: int = 0
 
 func end_text():
 	text_index = 0
@@ -64,7 +64,7 @@ func _text():
 		rect.play("fadeOut")
 		text_start = true
 	if not _EncounterText :
-		var text = preload("res://text/text.tscn")
+		var text: PackedScene = preload("res://text/text.tscn")
 		_EncounterText = text.instantiate()
 		EncounterText[0] = text_array[text_index]
 		_EncounterText.text = EncounterText
@@ -78,7 +78,7 @@ func _text():
 			EncounterText[0] = text_array[text_index]
 		_EncounterText.text = EncounterText
 
-func reset_text():
+func reset_text() -> void:
 	if text_start: 
 		return
 	if _EncounterText :

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyasa7ii5p75i"]
 
-[ext_resource type="Script" path="res://text/text.gd" id="1_o32jw"]
+[ext_resource type="Script" uid="uid://cy5d81n8p7e26" path="res://text/text.gd" id="1_o32jw"]
 [ext_resource type="Texture2D" uid="uid://pqsoqloxsbv8" path="res://imgs/wars/rightwide.png" id="2_2vusp"]
 
 [node name="Text" type="Node2D"]

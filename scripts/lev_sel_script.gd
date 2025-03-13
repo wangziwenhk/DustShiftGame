@@ -1,17 +1,17 @@
 extends Node2D
 
-@onready var back = $Back
-@onready var sp1 = $SP1
-@onready var sp2 = $SP2
-@onready var sp3 = $SP3
-@onready var new_node = $StartPane
+@onready var back: TextureButton = $Back
+@onready var sp1: TextureButton = $SP1
+@onready var sp2: TextureButton = $SP2
+@onready var sp3: TextureButton = $SP3
+@onready var new_node: ColorRect = $StartPane
 
-@onready var psel_left_anim = $PselLeft/AnimationPlayer
-@onready var psel_right_anim = $PselRight/AnimationPlayer
+@onready var psel_left_anim: AnimationPlayer = $PselLeft/AnimationPlayer
+@onready var psel_right_anim: AnimationPlayer = $PselRight/AnimationPlayer
 
-var phease = 0
-var start = 0
-var thread = Thread.new()
+var phease: int = 0
+var start: int  = 0
+var thread      = Thread.new()
 
 func _ready():
 	back.connect("pressed",_back)
@@ -24,7 +24,7 @@ func _ready():
 	psel_left_anim.play("start")
 	psel_right_anim.play("start")
 
-func _process(delta):
+func _process(_delta) -> void:
 	if start == 1 && new_node.color.a < 1:
 		new_node.color.a += 0.003
 		return
@@ -41,7 +41,7 @@ func _process(delta):
 		_sp3_hover()
 	pass
 	
-func _sp1_hover():
+func _sp1_hover() -> void:
 	if phease == 1: return
 	phease = 1
 	$P3S/P3SAnimation.play("RESET")
@@ -49,14 +49,14 @@ func _sp1_hover():
 	$P1S/P1SAnimation.play("in_move")
 	
 	
-func _sp2_hover():
+func _sp2_hover() -> void:
 	if phease == 2: return
 	phease = 2
 	$P3S/P3SAnimation.play("RESET")
 	$P1S/P1SAnimation.play("RESET")
 	$P2S/P2SAnimation.play("in_move")
 
-func _sp3_hover():
+func _sp3_hover() -> void:
 	if phease == 3: return
 	phease = 3
 	$P1S/P1SAnimation.play("RESET")

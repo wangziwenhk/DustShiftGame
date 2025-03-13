@@ -1,16 +1,16 @@
 extends Control
 
-@onready var _menu_player = $MainMenuMusic
-@onready var _button_p = $ButtonP
-@onready var _save = $Saved
-@onready var _ut_start = $UTStart
-@onready var _text = $Text
-@onready var _damage = $damage
-@onready var _spearappear = $spearappear
-@onready var _av_audio = $AVAudio
-@onready var _select = $Select
+@onready var _menu_player: AudioStreamPlayer = $MainMenuMusic
+@onready var _button_p: AudioStreamPlayer = $ButtonP
+@onready var _save: AudioStreamPlayer = $Saved
+@onready var _ut_start: AudioStreamPlayer = $UTStart
+@onready var _text: AudioStreamPlayer = $Text
+@onready var _damage: AudioStreamPlayer = $damage
+@onready var _spearappear: AudioStreamPlayer = $spearappear
+@onready var _av_audio: AudioStreamPlayer = $AVAudio
+@onready var _select: AudioStreamPlayer = $Select
 
-var _menu_status = true
+var _menu_status: bool = true
 
 func play_select():
 	_select.play()

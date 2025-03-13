@@ -1,14 +1,14 @@
 extends Node
 
-@onready var animation = $Title/AnimationPlayer
-@onready var animation_subtitle = $Subtitle/AnimationPlayer
-@onready var animation_warn_info = $WarnInfo/AnimationPlayer
-@onready var ok_z  = $Label/AnimationPlayer
-var menu = null
+@onready var animation: AnimationPlayer = $Title/AnimationPlayer
+@onready var animation_subtitle: AnimationPlayer = $Subtitle/AnimationPlayer
+@onready var animation_warn_info: AnimationPlayer = $WarnInfo/AnimationPlayer
+@onready var ok_z: AnimationPlayer = $Label/AnimationPlayer
+var menu                           = null
 
 var config = ConfigFile.new()
 
-var status = true
+var status: bool = true
 
 func _ready():
 	var err = config.load("user://player_data.cfg")
@@ -36,7 +36,7 @@ func _show_subtitle(name):
 		await wait_for_sec(1.0)
 		animation_warn_info.play("fadeIn")
 
-func _process(delta):
+func _process(_delta):
 	if (!status) and (Input.is_action_just_pressed("ui_true")):
 		status = true
 		ok_z.stop()
